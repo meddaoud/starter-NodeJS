@@ -52,5 +52,18 @@ const replyMessage = (message) => {
     console.error('Error while sending message to Recast.AI', err)
   })
 }
+{
+  type: 'quickReplies',
+  content: {
+    title: 'TITLE',
+    buttons: [
+      {
+        title: 'BUTTON_TITLE',
+        value: 'BUTTON_VALUE'
+      }
+    ]
+  }
+}
+
 
 module.exports = replyMessage
