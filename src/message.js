@@ -33,7 +33,7 @@ const replyMessage = (message) => {
 
     // If there is not any message return by Recast.AI for this current conversation
     if (!result.replies.length) {
-      message.addReply({ type: 'text', content: 'Dsl Ma fhemtekch ya {{user_first_name}}' })
+      message.addReply({ type: 'text', content: 'Dsl Ma fhemtekch ya' })
     } else {
       // Add each reply received from API to replies stack
       result.replies.forEach(replyContent => message.addReply({ type: 'text', content: replyContent }))
@@ -51,18 +51,6 @@ const replyMessage = (message) => {
   .catch(err => {
     console.error('Error while sending message to Recast.AI', err)
   })
-}
-{
-  type: 'quickReplies',
-  content: {
-    title: 'TITLE',
-    buttons: [
-      {
-        title: 'BUTTON_TITLE',
-        value: 'BUTTON_VALUE'
-      }
-    ]
-  }
 }
 
 
