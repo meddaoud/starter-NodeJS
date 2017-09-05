@@ -42,21 +42,7 @@ const replyMessage = (message) => {
     // Send all replies
     message.reply()
     .then(() => {
-      // Doconst recastai = require('recastai')
-
-if (result.action && result.action.slug === 'battle' && result.action.done) {
-  battle(result.getMemory('repo-1').raw, result.getMemory('repo-2').raw)
-    .then(res => {
-      message.addReply(res)
-        message.reply()
-     })
-}
-      
-      
-      
-      
-      
-      
+      // Doconst recastai = require('recastai') 
       
       
       
