@@ -43,18 +43,7 @@ const replyMessage = (message) => {
     message.reply()
     .then(() => {
       // Do some code after sending messages
-      {
-  type: 'quickReplies',
-  content: {
-    title: 'test',
-    buttons: [
-      {
-        title: 'test',
-        value: 'postback'
-      }
-    ]
-  }
-}
+   
       
       
     })
