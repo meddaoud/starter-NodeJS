@@ -2,7 +2,7 @@
  * message.js
  * This file contains your bot code
  */
-
+const battle = require('./battle’)
 const recastai = require('recastai')
 
 // This function is the core of the bot behaviour
