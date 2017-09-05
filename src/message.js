@@ -2,7 +2,7 @@
  * message.js
  * This file contains your bot code
  */
-const battle = require('./battle’)
+
 const recastai = require('recastai')
 
 // This function is the core of the bot behaviour
@@ -44,7 +44,13 @@ const replyMessage = (message) => {
     .then(() => {
       // Doconst recastai = require('recastai')
 
-
+if (result.action && result.action.slug === 'battle' && result.action.done) {
+  battle(result.getMemory('repo-1').raw, result.getMemory('repo-2').raw)
+    .then(res => {
+      message.addReply(res)
+        message.reply()
+     })
+}
       
       
       
